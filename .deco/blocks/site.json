@@ -3,12 +3,12 @@
     "type": "website",
     "jsonLDs": [],
     "noIndexing": false,
-    "description": "Improve your page performance with deco.cx",
-    "titleTemplate": "%s | deco.cx",
+    "description": "TUJU - 29/07/2024",
     "descriptionTemplate": "%s | deco.cx",
-    "title": "Jantar TUJU",
+    "title": "TUJU",
     "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11884/1c465370-2013-470d-888f-33378a9da05f",
-    "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8/22c99167-0018-484f-8b0d-4295a7d771f2"
+    "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11884/c4848ecd-37e5-47ae-813b-db86ea464f2f",
+    "titleTemplate": "%s"
   },
   "global": [
     {
