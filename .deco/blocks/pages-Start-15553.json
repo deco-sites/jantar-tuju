@@ -73,7 +73,9 @@
           ],
           "id": "camisa"
         }
-      ]
+      ],
+      "date": "29.07.24",
+      "logo": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/11884/0b7c9e49-4e7d-4bd3-8c90-a03669585df3"
     }
   ],
   "__resolveType": "website/pages/Page.tsx"
