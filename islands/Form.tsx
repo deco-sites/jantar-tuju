@@ -74,7 +74,7 @@ export default function Form({
 
     try {
       const response = await fetch(
-        `https://script.google.com/macros/s/AKfycby_vTAH2AKb8YWTZRixeVll2djIx-JoYG8SJWWGMRntNR8T-NEYfsbgIGiKWKF5Tcpo/exec${params}`
+        `https://script.google.com/macros/s/AKfycbzBpNdbtSUMwykOT9Il9gZhHldiwg_VlKRnYZ0akmN9tOI7-Pv6-6rltiwKrZHY9uwFkg/exec${params}`
       );
       if (response.status === 200) {
         onSent();
