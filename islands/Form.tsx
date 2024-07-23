@@ -1,6 +1,7 @@
 import { FormField } from "site/sections/Form.tsx";
 import TermModal from "site/islands/TermModal.tsx";
 import { useSignal } from "@preact/signals";
+import Icon from "site/components/ui/Icon.tsx";
 
 const InputField = ({ field }: { field: FormField }) => {
   const { id: inputId, name, required, selectValues, children } = field;
@@ -55,7 +56,7 @@ export default function Form({
 }) {
   const modalOpen = useSignal(false);
   const acceptedTerm = useSignal(false);
-  console.log(fields);
+  const loading = useSignal(false);
 
   // deno-lint-ignore no-explicit-any
   const handleSubmit = (e: any) => {
@@ -118,10 +119,14 @@ export default function Form({
             </div>
           </label>
           <button
-            class="btn w-full md:w-fit px-8 py-3 bg-[#27AE6B] hover:bg-[#329f69] text-white"
+            class="btn w-full md:w-fit px-8 py-2 bg-[#27AE6B] hover:bg-[#329f69] text-white"
             type="submit"
           >
-            Enviar
+            {loading.value ? (
+              <Icon id="loading" width="20" height="20" class="animate-spin" />
+            ) : (
+              <>Enviar</>
+            )}
           </button>
         </div>
       </form>

@@ -47,6 +47,10 @@
 		<path d="M1.24023 1.40039L16.6002 16.7604" stroke="black" stroke-width="2"/>
 		<path d="M16.6006 1.40039L1.24059 16.7604" stroke="black" stroke-width="2"/>
 	</symbol>
+	<symbol id="loading" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+		<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+		<path d="M12 3a9 9 0 1 0 9 9" />
+	</symbol>
 		
 		
 </svg>

@@ -16,6 +16,7 @@ export type AvailableIcons =
   | "Plus"
   | "Minus"
   | "MapPin"
+  | "loading"
   | "Phone"
   | "Elo"
   | "Mastercard"
