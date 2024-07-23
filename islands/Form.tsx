@@ -50,8 +50,10 @@ const InputField = ({ field }: { field: FormField }) => {
 export default function Form({
   fields,
   term,
+  onSent,
 }: {
   fields: FormField[];
+  onSent: () => void;
   term: string;
 }) {
   const modalOpen = useSignal(false);
@@ -59,30 +61,32 @@ export default function Form({
   const loading = useSignal(false);
 
   // deno-lint-ignore no-explicit-any
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     const formData = new FormData(e.target);
-    // const sheets = google.sheets({ version: 'v4', auth: 'AIzaSyD3Yn0079oAQRI4bMM5_lLECYXCvN3IpQw' })
-    // const sheetsID = "1noft7lT-IW_SCYzwDYC1bE4BGl2VMFsNiLQhxWT9_Hs"
-    // const range = 'SHEET1!A-E'
+    loading.value = true;
 
-    // try {
-    //   const response = await sheets.spreadsheets.values.append({
-    //     sheetsID,
-    //     range,
-    //     valueInputOption: 'RAW',
-    //     resource: {
-    //       values: [[name, email]],
-    //     },
-    //   });
-    //   res.json(response.data);
-    // } catch (error) {
-    //   res.status(500).send('Error adding data to sheet');
-    // }
+    let params = "?";
 
     for (const [key, value] of formData.entries()) {
-      console.log(`${key}: ${value}`);
+      params += `${key}=${value}&`;
     }
+
+    try {
+      const response = await fetch(
+        `https://script.google.com/macros/s/AKfycby_vTAH2AKb8YWTZRixeVll2djIx-JoYG8SJWWGMRntNR8T-NEYfsbgIGiKWKF5Tcpo/exec${params}`
+      );
+      if (response.status === 200) {
+        onSent();
+      } else {
+        alert("Erro ao enviar. Por favor, envie o fomulário novamente");
+      }
+    } catch (error) {
+      console.log(error.message)
+      alert("Erro inesperado. Por favor, envie o fomulário novamente");
+    }
+
+    loading.value = false;
   };
 
   return (
@@ -120,6 +124,7 @@ export default function Form({
           </label>
           <button
             class="btn w-full md:w-fit px-8 py-2 bg-[#27AE6B] hover:bg-[#329f69] text-white"
+            disabled={loading.value}
             type="submit"
           >
             {loading.value ? (

@@ -4,7 +4,7 @@ import { FormProps } from "site/sections/Form.tsx";
 import Form from "site/islands/Form.tsx";
 
 export default function FormStates(props: FormProps) {
-  const [sent, setSent] = useState(true);
+  const [sent, setSent] = useState(false);
 
   return (
     <div class="flex flex-col justify-center grow">
@@ -17,10 +17,13 @@ export default function FormStates(props: FormProps) {
       ) : (
         <>
           <p dangerouslySetInnerHTML={{ __html: props.initialText }}></p>
-          <Form fields={props.formFields} term={props.termUse}/>
+          <Form
+            fields={props.formFields}
+            term={props.termUse}
+            onSent={() => setSent(true)}
+          />
         </>
       )}
-      <div onClick={() => setSent(!sent)}>oi</div>
     </div>
   );
 }
