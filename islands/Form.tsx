@@ -117,16 +117,6 @@ export default function Form({
               </span>
             </div>
           </label>
-          {modalOpen.value && (
-            <TermModal
-              term={term}
-              onClose={() => (modalOpen.value = false)}
-              onAccept={() => {
-                modalOpen.value = false;
-                acceptedTerm.value = true;
-              }}
-            />
-          )}
           <button
             class="btn w-full md:w-fit px-8 py-3 bg-[#27AE6B] hover:bg-[#329f69] text-white"
             type="submit"
@@ -135,6 +125,16 @@ export default function Form({
           </button>
         </div>
       </form>
+      {modalOpen.value && (
+        <TermModal
+          term={term}
+          onClose={() => (modalOpen.value = false)}
+          onAccept={() => {
+            modalOpen.value = false;
+            acceptedTerm.value = true;
+          }}
+        />
+      )}
     </>
   );
 }

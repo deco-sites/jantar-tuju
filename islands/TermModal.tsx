@@ -10,13 +10,13 @@ export default function TermModal({ term, onClose, onAccept }: Props) {
   return (
     <div
       onClick={onClose}
-      class="absolute flex items-center justify-center top-0 left-0 h-screen w-screen bg-[#00000060]"
+      class="fixed flex items-center justify-center top-0 left-0 min-h-screen w-screen bg-[#00000060] px-4"
       style={"html::-webkit-scrollbar-track: none"}
       
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        class="flex flex-col gap-4 bg-[#F0ECE1] max-w-[650px] max-h-[750px] w-full p-8"
+        class="flex flex-col gap-4 bg-[#F0ECE1] max-w-[650px] max-h-[500px] md:max-h-[750px] w-full p-8"
       >
         <div class="flex gap-4 w-full">
           <h2 class="text-[#27AE6B] text-lg font-bold w-full">
