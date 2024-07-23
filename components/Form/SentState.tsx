@@ -19,11 +19,11 @@ export default function SentState({
   return (
     <div class="flex flex-col gap-8">
       <h2
-        class="text-5xl italic"
+        class="text-5xl md:text-5xl italic"
         style="font-family: 'Playfair Display'"
         dangerouslySetInnerHTML={{ __html: sentTitle }}
       />
-      <p class="text-lg" dangerouslySetInnerHTML={{ __html: sentText }} />
+      <p class="text-md md:text-lg" dangerouslySetInnerHTML={{ __html: sentText }} />
       <div class="flex flex-col gap-3 border-y border-[#949E9E] py-8">
         {locationInfo.map((location) => (
           <div class="flex flex-col gap-1">

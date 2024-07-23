@@ -7,7 +7,7 @@ const InputField = ({ field }: { field: FormField }) => {
 
   if (children && children.length > 0) {
     return (
-      <div class="flex gap-4">
+      <div class="flex flex-col md:flex-row gap-8">
         {children.map((child) => (
           <InputField field={child} />
         ))}
@@ -93,7 +93,7 @@ export default function Form({
         {fields.map((field) => (
           <InputField field={field} />
         ))}
-        <div class="flex gap-4 w-full text-[#113032] items-center">
+        <div class="flex flex-col md:flex-row gap-8 md:gap-4 w-full text-[#113032] items-center">
           <label class="flex gap-2" for="acceptTerm">
             <input
               id="acceptTerm"
@@ -128,7 +128,7 @@ export default function Form({
             />
           )}
           <button
-            class="btn w-fit px-8 py-3 bg-[#27AE6B] hover:bg-[#329f69] text-white"
+            class="btn w-full md:w-fit px-8 py-3 bg-[#27AE6B] hover:bg-[#329f69] text-white"
             type="submit"
           >
             Enviar

@@ -21,7 +21,6 @@ export interface SelectInput {
  * @title {{{id}}} - {{{name}}}
  */
 export interface FormField {
-
   /**
    * @title Identificador
    * @description Nome da coluna na planilha onde será salvo
@@ -80,12 +79,13 @@ export interface FormProps {
 
 export default function Section(props: FormProps) {
   return (
-    <div
-      class="flex items-center overflow-hidden bg-no-repeat bg-cover bg-center h-screen w-screen md:px-12"
-      style={`background-image: url('${props.background}');`}
-    >
+    <div class="flex flex-col md:flex-row items-center min-h-screen">
       <div
-        class="flex flex-col justify-center bg-no-repeat bg-cover px-16 max-w-[750px] min-h-[800px]"
+        class="flex md:absolute -z-50 items-center overflow-hidden bg-no-repeat bg-cover bg-center h-32 md:h-screen w-screen"
+        style={`background-image: url('${props.background}');`}
+      ></div>
+      <div
+        class="flex flex-col bg-[#F0ECE2] md:bg-transparent justify-center bg-no-repeat bg-auto md:bg-cover px-4 md:px-16 max-w-[750px] min-h-[800px] ml-0 md:ml-20 grow"
         style="background-image: url('/background.svg');"
       >
         <div class="flex relative self-start items-center w-full h-full">
@@ -99,7 +99,7 @@ export default function Section(props: FormProps) {
             id="flower"
             width="50"
             height="50"
-            class="absolute top-[-26px] right-[-90px]"
+            class="hidden md:block absolute top-[-26px] right-[-90px]"
           />
         </div>
 
