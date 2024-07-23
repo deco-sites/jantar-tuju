@@ -1,6 +1,4 @@
-import { useState } from "preact/hooks";
 import Icon from "site/components/ui/Icon.tsx";
-import SentState from "site/components/Form/SentState.tsx";
 import FormStates from "site/islands/FormStates.tsx";
 import { ImageWidget } from "apps/admin/widgets.ts";
 
