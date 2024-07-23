@@ -20,13 +20,20 @@ export interface SelectInput {
 }
 
 /**
- * @title {{{name}}}
+ * @title {{{id}}} - {{{name}}}
  */
 export interface FormField {
+
+  /**
+   * @title Identificador
+   * @description Nome da coluna na planilha onde será salvo
+   */
+  id: string;
+
   /**
    * @title Nome
    */
-  name?: string;
+  name: string;
   /**
    * @title Obrigatório
    */
@@ -76,20 +83,27 @@ export interface FormProps {
 export default function Section(props: FormProps) {
   return (
     <div
-      class="flex items-center bg-no-repeat bg-cover bg-center h-screen w-screen md:px-12"
+      class="flex items-center overflow-hidden bg-no-repeat bg-cover bg-center h-screen w-screen md:px-12"
       style={`background-image: url('${props.background}');`}
     >
       <div
-        class="relative bg-no-repeat bg-cover py-24 px-16 max-w-[750px]"
+        class="flex flex-col justify-center bg-no-repeat bg-cover px-16 max-w-[750px] min-h-[800px]"
         style="background-image: url('/background.svg');"
       >
-        <Icon id="deco" width="173" height="48" class="absolute top-[-24px]" />
-        <Icon
-          id="flower"
-          width="50"
-          height="50"
-          class="absolute top-[-24px] right-[-24px]"
-        />
+        <div class="flex relative self-start items-center w-full h-full">
+          <Icon
+            id="deco"
+            width="173"
+            height="48"
+            class="absolute top-[-26px]"
+          />
+          <Icon
+            id="flower"
+            width="50"
+            height="50"
+            class="absolute top-[-26px] right-[-90px]"
+          />
+        </div>
 
         <FormStates {...props} />
       </div>

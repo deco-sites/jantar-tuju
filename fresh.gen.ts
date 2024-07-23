@@ -5,6 +5,7 @@
 import * as $_app from "./routes/_app.tsx";
 import * as $Form from "./islands/Form.tsx";
 import * as $FormStates from "./islands/FormStates.tsx";
+import * as $TermModal from "./islands/TermModal.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -14,6 +15,7 @@ const manifest = {
   islands: {
     "./islands/Form.tsx": $Form,
     "./islands/FormStates.tsx": $FormStates,
+    "./islands/TermModal.tsx": $TermModal,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

@@ -9,6 +9,9 @@
     font-family: var(--font-family);
   }
 
+  html::-webkit-scrollbar-track {
+    background: none;
+  }
   /** Remove default styles from input[type=number] */
   input[type=number]::-webkit-inner-spin-button,
   input[type=number]::-webkit-outer-spin-button {
@@ -42,4 +45,16 @@
   .scrollbar-none::-webkit-scrollbar {
     display: none;
   }
+
+  .scrollbar-bg {
+    background: none;
+  }
+
+  .scrollbar-bg::-webkit-scrollbar-track {
+    background: none;
+  }
+
+  .scrollbar-bg::-webkit-scrollbar-thumb {
+    background: none;
+  }  
 }

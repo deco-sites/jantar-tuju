@@ -37,23 +37,29 @@
               "selectValues": [],
               "children": [],
               "name": "Nome",
-              "required": true
+              "required": true,
+              "id": "nome"
             },
             {
               "selectValues": [],
               "children": [],
               "name": "E-mail profissional",
-              "required": true
+              "required": true,
+              "id": "email"
             }
-          ]
+          ],
+          "name": "Nome + e-amail",
+          "id": "."
         },
         {
           "name": "Telefone",
-          "required": true
+          "required": true,
+          "id": "telefone"
         },
         {
           "selectValues": [],
-          "name": "Restrições alimentares e/ou alergias"
+          "name": "Restrições alimentares e/ou alergias",
+          "id": "restricoes"
         },
         {
           "name": "Tamanho de camisa",
@@ -64,7 +70,8 @@
             "M",
             "G",
             "GG"
-          ]
+          ],
+          "id": "camisa"
         }
       ]
     }

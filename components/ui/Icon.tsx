@@ -36,6 +36,7 @@ export type AvailableIcons =
   | "FilterList"
   | "WhatsApp"
   | "deco"
+  | "close"
   | "ArrowsPointingOut";
 
 interface Props extends JSX.SVGAttributes<SVGSVGElement> {

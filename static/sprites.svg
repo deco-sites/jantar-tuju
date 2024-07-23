@@ -43,5 +43,10 @@
 		<rect x="33" y="16.5" width="16.5" height="16.5" fill="#27AE6B"/>
 		<rect x="16.5" y="33" width="16.5" height="16.5" fill="#27AE6B"/>
 	</symbol>
+	<symbol id="close" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M1.24023 1.40039L16.6002 16.7604" stroke="black" stroke-width="2"/>
+		<path d="M16.6006 1.40039L1.24059 16.7604" stroke="black" stroke-width="2"/>
+	</symbol>
+		
 		
 </svg>

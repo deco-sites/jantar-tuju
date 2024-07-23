@@ -18,7 +18,7 @@ export default function SentState({
 }: Props) {
   return (
     <div class="flex flex-col gap-8">
-      <h2 class="text-6xl font-[Playfair Display] italic" dangerouslySetInnerHTML={{ __html: sentTitle }} />
+      <h2 class="text-6xl playfair italic" dangerouslySetInnerHTML={{ __html: sentTitle }} />
       <p class="text-lg" dangerouslySetInnerHTML={{ __html: sentText }} />
       <div class="flex flex-col gap-3 border-y border-[#949E9E] py-8">
         {locationInfo.map((location) => (
